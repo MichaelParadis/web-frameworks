@@ -1,0 +1,12 @@
+{
+  "pull_request": {
+    "head": {
+      "ref": "test",
+      "refType": "branch"
+    },
+    "base": {
+      "ref": "master",
+      "refType": "branch"
+    }
+  }
+}

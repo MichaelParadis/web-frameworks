@@ -1,0 +1,17 @@
+[CI/matrix] 🚀  Start image=catthehacker/ubuntu:act-latest
+[CI/matrix]   🐳  docker pull image=catthehacker/ubuntu:act-latest platform= username= forcePull=true
+[CI/matrix]   🐳  docker create image=catthehacker/ubuntu:act-latest platform= entrypoint=["tail" "-f" "/dev/null"] cmd=[]
+[CI/matrix]   🐳  docker run image=catthehacker/ubuntu:act-latest platform= entrypoint=["tail" "-f" "/dev/null"] cmd=[]
+[CI/matrix]   ☁  git clone 'https://github.com/trilom/file-changes-action' # ref=v1.2.4
+[CI/matrix]   ☁  git clone 'https://github.com/ruby/setup-ruby' # ref=v1
+[CI/matrix] ⭐ Run Main actions/checkout@v3
+[CI/matrix]   🐳  docker cp src=/home/mike/projects/web-frameworks/. dst=/home/mike/projects/web-frameworks
+[CI/matrix]   ✅  Success - Main actions/checkout@v3
+[CI/matrix] ⭐ Run Main trilom/file-changes-action@v1.2.4
+[CI/matrix]   🐳  docker cp src=/home/mike/.cache/act/trilom-file-changes-action@v1.2.4/ dst=/var/run/act/actions/trilom-file-changes-action@v1.2.4/
+[CI/matrix]   🐳  docker exec cmd=[node /var/run/act/actions/trilom-file-changes-action@v1.2.4/dist/index.js] user= workdir=
+[CI/matrix]   ❗  ::error::There was an getting action inputs.%0AException: {%0A  "error": "500/getInputs Error",%0A  "from": "getInputs",%0A  "message": "Received an issue getting action inputs.",%0A  "payload": {%0A    "GITHUB_ACTION_PATH": "",%0A    "GITHUB_GRAPHQL_URL": "https://api.github.com/graphql",%0A    "GITHUB_PATH": "/var/run/act/workflow/pathcmd.txt",%0A    "GITHUB_OUTPUT": "/var/run/act/workflow/outputcmd.txt",%0A    "INPUT_GITHUBREPO": "",%0A    "INPUT_PRNUMBER": "",%0A    "GITHUB_RUN_ID": "1",%0A    "GITHUB_HEAD_REF": "",%0A    "INPUT_PUSHAFTER": "",%0A    "GITHUB_RUN_NUMBER": "1",%0A    "GITHUB_REPOSITORY_OWNER": "MichaelParadis",%0A    "INPUT_GITHUBTOKEN": "",%0A    "GITHUB_JOB": "matrix",%0A    "GITHUB_REPOSITORY": "MichaelParadis/web-frameworks",%0A    "GITHUB_SHA": "8e8f2c92828d744af52bbd77ae45011dc13fcc71",%0A    "GITHUB_REF_NAME": "",%0A    "GITHUB_STATE": "/var/run/act/workflow/statecmd.txt",%0A    "GITHUB_ACTION": "file_changes",%0A    "GITHUB_ACTION_REPOSITORY": "trilom/file-changes-action",%0A    "GITHUB_EVENT_PATH": "/var/run/act/workflow/event.json",%0A    "GITHUB_ACTOR": "nektos/act",%0A    "GITHUB_EVENT_NAME": "pull_request",%0A    "GITHUB_TOKEN": "",%0A    "GITHUB_API_URL": "https://api.github.com",%0A    "INPUT_OUTPUT": "json",%0A    "GITHUB_SERVER_URL": "https://github.com",%0A    "GITHUB_REF_TYPE": "",%0A    "GITHUB_RETENTION_DAYS": "0",%0A    "GITHUB_ENV": "/var/run/act/workflow/envs.txt",%0A    "GITHUB_WORKSPACE": "/home/mike/projects/web-frameworks",%0A    "GITHUB_BASE_REF": "",%0A    "INPUT_FILEOUTPUT": "json",%0A    "GITHUB_REF": "refs/pull/%25!f(<nil>)/merge",%0A    "GITHUB_ACTION_REF": "v1.2.4",%0A    "GITHUB_ACTIONS": "true",%0A    "INPUT_PUSHBEFORE": "",%0A    "GITHUB_WORKFLOW": "CI",%0A    "HOME": "/root"%0A  }%0A}
+[CI/matrix]   | /run/act/actions/trilom-file-changes-action@v1.2.4/dist/index.js:1
+[CI/matrix]   ❌  Failure - Main trilom/file-changes-action@v1.2.4
+[CI/matrix] exitcode '1': failure
+[CI/matrix] 🏁  Job failed
